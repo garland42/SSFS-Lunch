@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A5B39CC1CCFC0D7006B5BE3 /* document.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3A5B39CB1CCFC0D7006B5BE3 /* document.xml */; };
 		3AE044561CCE653E00497E36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE044551CCE653E00497E36 /* AppDelegate.swift */; };
 		3AE044581CCE653E00497E36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE044571CCE653E00497E36 /* ViewController.swift */; };
 		3AE0445B1CCE653E00497E36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AE044591CCE653E00497E36 /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		3AE044601CCE653E00497E36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AE0445E1CCE653E00497E36 /* LaunchScreen.storyboard */; };
 		3AE0446B1CCE653E00497E36 /* SSFS_LunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE0446A1CCE653E00497E36 /* SSFS_LunchTests.swift */; };
 		3AE044761CCE653E00497E36 /* SSFS_LunchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE044751CCE653E00497E36 /* SSFS_LunchUITests.swift */; };
+		3AE044841CCE679000497E36 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE044831CCE679000497E36 /* Menu.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A5B39CB1CCFC0D7006B5BE3 /* document.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = document.xml; sourceTree = "<group>"; };
 		3AE044521CCE653E00497E36 /* SSFS Lunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SSFS Lunch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE044551CCE653E00497E36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AE044571CCE653E00497E36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		3AE044711CCE653E00497E36 /* SSFS LunchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SSFS LunchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE044751CCE653E00497E36 /* SSFS_LunchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSFS_LunchUITests.swift; sourceTree = "<group>"; };
 		3AE044771CCE653E00497E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AE044831CCE679000497E36 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,14 @@
 		3AE044541CCE653E00497E36 /* SSFS Lunch */ = {
 			isa = PBXGroup;
 			children = (
+				3A5B39CB1CCFC0D7006B5BE3 /* document.xml */,
 				3AE044551CCE653E00497E36 /* AppDelegate.swift */,
 				3AE044571CCE653E00497E36 /* ViewController.swift */,
 				3AE044591CCE653E00497E36 /* Main.storyboard */,
 				3AE0445C1CCE653E00497E36 /* Assets.xcassets */,
 				3AE0445E1CCE653E00497E36 /* LaunchScreen.storyboard */,
 				3AE044611CCE653E00497E36 /* Info.plist */,
+				3AE044831CCE679000497E36 /* Menu.swift */,
 			);
 			path = "SSFS Lunch";
 			sourceTree = "<group>";
@@ -231,6 +237,7 @@
 			files = (
 				3AE044601CCE653E00497E36 /* LaunchScreen.storyboard in Resources */,
 				3AE0445D1CCE653E00497E36 /* Assets.xcassets in Resources */,
+				3A5B39CC1CCFC0D7006B5BE3 /* document.xml in Resources */,
 				3AE0445B1CCE653E00497E36 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AE044841CCE679000497E36 /* Menu.swift in Sources */,
 				3AE044581CCE653E00497E36 /* ViewController.swift in Sources */,
 				3AE044561CCE653E00497E36 /* AppDelegate.swift in Sources */,
 			);
@@ -484,6 +492,7 @@
 				3AE0447C1CCE653E00497E36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3AE0447D1CCE653E00497E36 /* Build configuration list for PBXNativeTarget "SSFS LunchTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +501,7 @@
 				3AE0447F1CCE653E00497E36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3AE044801CCE653E00497E36 /* Build configuration list for PBXNativeTarget "SSFS LunchUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +510,7 @@
 				3AE044821CCE653E00497E36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
