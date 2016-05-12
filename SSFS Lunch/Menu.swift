@@ -12,7 +12,8 @@ class Menu {
     
     var shorterMenu = [String]()
     var otherMenu = [String]()
-    var aMenu = NSMutableString()
+    var differentMenu = [String]()
+    var aMenu = String()
     
     init() {
         //self.menuContents = something
@@ -41,13 +42,52 @@ class Menu {
                 otherMenu.append(item)
             }
         }
-        //print(otherMenu)
         for item in otherMenu {
-            let newString = String(item)
-            aMenu.appendString(newString)
+            if item.containsString("&amp;") {
+                let newString = item.stringByReplacingOccurrencesOfString("&amp;", withString: "&")
+                differentMenu.append(newString)
+            }
+            else {
+                differentMenu.append(item)
+            }
         }
-        print(aMenu)
+        //print(differentMenu)
+        for item in differentMenu {
+            let newString = String(item)
+            aMenu = aMenu + newString
+            //aMenu.appendString(newString)
+        }
+        //print(aMenu)
     }
+    
+        func rangeFromNSRange(nsRange: NSRange, forString str: String) -> Range<String.Index>? {
+            let fromUTF16 = str.utf16.startIndex.advancedBy(nsRange.location, limit: str.utf16.endIndex)
+            let toUTF16 = fromUTF16.advancedBy(nsRange.length, limit: str.utf16.endIndex)
+            
+            if let from = String.Index(fromUTF16, within: str),
+            let to = String.Index(toUTF16, within: str) {
+                return from ..< to
+            }
+            return nil
+        }
+        
+        func getLunch() {
+            do {
+                let regex = try NSRegularExpression(pattern: "TUESDAY(.*?)VEGETARIAN", options: NSRegularExpressionOptions.CaseInsensitive)
+                let matches = regex.matchesInString(aMenu as String, options: [], range: NSMakeRange(0, aMenu.characters.count))
+                if let match = matches.first {
+                    let range = match.rangeAtIndex(1)
+                    if let swiftRange = rangeFromNSRange(range, forString: aMenu as String) {
+                        let name = aMenu.substringWithRange(swiftRange)
+                        print(name)
+                    }
+                }
+            } catch {
+                //regex was bad!
+            }
+        }
+        
+    
     
     
     
