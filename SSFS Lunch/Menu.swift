@@ -16,8 +16,6 @@ class Menu {
     var aMenu = String()
     
     init() {
-        //self.menuContents = something
-        //NSBundle, mainBundle
         let path = NSBundle.mainBundle().pathForResource("document", ofType: "xml")
         
         do {
@@ -51,13 +49,10 @@ class Menu {
                 differentMenu.append(item)
             }
         }
-        //print(differentMenu)
         for item in differentMenu {
             let newString = String(item)
             aMenu = aMenu + newString
-            //aMenu.appendString(newString)
         }
-        //print(aMenu)
     }
     
         func rangeFromNSRange(nsRange: NSRange, forString str: String) -> Range<String.Index>? {
@@ -71,24 +66,21 @@ class Menu {
             return nil
         }
         
-        func getLunch() {
+    func getLunch(stringToParse: String, regExText: String) {
             do {
-                let regex = try NSRegularExpression(pattern: "TUESDAY(.*?)VEGETARIAN", options: NSRegularExpressionOptions.CaseInsensitive)
-                let matches = regex.matchesInString(aMenu as String, options: [], range: NSMakeRange(0, aMenu.characters.count))
+                let regex = try NSRegularExpression(pattern: regExText, options: NSRegularExpressionOptions.CaseInsensitive)
+                let matches = regex.matchesInString(stringToParse as String, options: [], range: NSMakeRange(0, stringToParse.characters.count))
                 if let match = matches.first {
                     let range = match.rangeAtIndex(1)
-                    if let swiftRange = rangeFromNSRange(range, forString: aMenu as String) {
-                        let name = aMenu.substringWithRange(swiftRange)
-                        print(name)
+                    if let swiftRange = rangeFromNSRange(range, forString: stringToParse as String) {
+                        let name = stringToParse.substringWithRange(swiftRange)
+                        //print(name)
                     }
                 }
             } catch {
                 //regex was bad!
             }
         }
-        
-    
-    
     
     
 }
