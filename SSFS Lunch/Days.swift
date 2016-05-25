@@ -5,6 +5,8 @@
 //  Created by Claire Youmans on 5/12/16.
 //  Copyright © 2016 Claire Youmans. All rights reserved.
 //
+//  Adds the days to the pickerview.
+//
 
 import UIKit
 class Days: NSObject, UIPickerViewDataSource {

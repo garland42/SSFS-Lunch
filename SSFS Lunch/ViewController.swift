@@ -11,16 +11,10 @@ import UIKit
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     var menu = Menu()
-    //var dailyMenu = DailyMenu(regExText: "MONDAY(.*?)TUESDAY")
+    var dailyMenu = DailyMenu()
     
     @IBOutlet weak var dayPicker: UIPickerView!
     var weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-    
-    //let monday = DailyMenu(regExText: "MONDAY(.*?)TUESDAY")
-    //let tuesday = DailyMenu(regExText: "TUESDAY(.*?)WEDNESDAY")
-    
-    //lunchlabel.text = monday.lunchEntree
-    
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1 //number of columns in the picker view

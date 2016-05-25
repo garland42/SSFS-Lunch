@@ -74,7 +74,7 @@ class Menu {
                     let range = match.rangeAtIndex(1)
                     if let swiftRange = rangeFromNSRange(range, forString: stringToParse as String) {
                         let name = stringToParse.substringWithRange(swiftRange)
-                        //print(name)
+                        print(name)
                     }
                 }
             } catch {
