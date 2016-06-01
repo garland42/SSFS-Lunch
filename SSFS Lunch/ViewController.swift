@@ -11,10 +11,18 @@ import UIKit
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     var menu = Menu()
-    var dailyMenu = DailyMenu()
     
     @IBOutlet weak var dayPicker: UIPickerView!
     var weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+    
+    let monday = DailyMenu(regExText: "MONDAY(.*?)TUESDAY", isFriday: false)
+    let tuesday = DailyMenu(regExText: "TUESDAY(.*?)WEDNESDAY", isFriday: false)
+    let wednesday = DailyMenu(regExText: "WEDNESDAY(.*?)THURSDAY", isFriday: false)
+    let thursday = DailyMenu(regExText: "THURSDAY(.*?)FRIDAY", isFriday: false)
+    let friday = DailyMenu(regExText: "FRIDAY(.*)", isFriday: true)
+    
+    //lunchlabel.text = monday.lunchEntree
+    
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1 //number of columns in the picker view
@@ -35,6 +43,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         let defaultPickerRow = dayPicker.numberOfRowsInComponent(0) / 2 //gives you half the # of rows
         dayPicker.selectRow(defaultPickerRow, inComponent: 0, animated: false)
         // Do any additional setup after loading the view, typically from a nib.
+        print(friday.lunchEntree)
+        print(friday.vegetarianEntree)
+        print(friday.sides)
+        print(friday.souperSoups)
+        print(friday.downtownDeli)
+//        print(friday.dayMeal)
     }
     
 

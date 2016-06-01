@@ -66,22 +66,22 @@ class Menu {
             return nil
         }
         
-    func getLunch(stringToParse: String, regExText: String) {
+    func getLunch(stringToParse: String, regExText: String) -> String {
+        var name: String = ""
             do {
                 let regex = try NSRegularExpression(pattern: regExText, options: NSRegularExpressionOptions.CaseInsensitive)
                 let matches = regex.matchesInString(stringToParse as String, options: [], range: NSMakeRange(0, stringToParse.characters.count))
                 if let match = matches.first {
                     let range = match.rangeAtIndex(1)
                     if let swiftRange = rangeFromNSRange(range, forString: stringToParse as String) {
-                        let name = stringToParse.substringWithRange(swiftRange)
-                        print(name)
+                        name = stringToParse.substringWithRange(swiftRange)
                     }
                 }
             } catch {
                 //regex was bad!
             }
+        return name
         }
-    
     
 }
 
