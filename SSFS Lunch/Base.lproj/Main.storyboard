@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N87-2E-YMm">
-                                <rect key="frame" x="279" y="180" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N87-2E-YMm" userLabel="Week">
+                                <rect key="frame" x="279" y="70" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -26,17 +26,63 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ihj-tQ-1aF">
                                 <rect key="frame" x="140" y="355" width="320" height="216"/>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ju2-JM-A4C" userLabel="Lunch Entrée">
+                                <rect key="frame" x="279" y="134" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DS5-Tv-DGl" userLabel="Vegetarian Entrée">
+                                <rect key="frame" x="279" y="171" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwK-39-aiA" userLabel="Sides">
+                                <rect key="frame" x="279" y="210" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVX-Ft-9Zm" userLabel="Souper Soups">
+                                <rect key="frame" x="279" y="251" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H4x-gR-w0v" userLabel="Downtown Deli">
+                                <rect key="frame" x="279" y="289" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="DS5-Tv-DGl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="03O-S8-VqT"/>
+                            <constraint firstItem="kwK-39-aiA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5ZO-5q-P4k"/>
+                            <constraint firstItem="H4x-gR-w0v" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="269" id="BWL-aa-obd"/>
+                            <constraint firstItem="ju2-JM-A4C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bci-Yj-uUH"/>
+                            <constraint firstItem="H4x-gR-w0v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GaJ-2a-AAK"/>
+                            <constraint firstItem="UVX-Ft-9Zm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IYd-UF-sWd"/>
                             <constraint firstItem="N87-2E-YMm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LHm-za-Scp"/>
-                            <constraint firstItem="N87-2E-YMm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="160" id="MOd-x7-6xi"/>
+                            <constraint firstItem="N87-2E-YMm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="50" id="MOd-x7-6xi"/>
+                            <constraint firstItem="ju2-JM-A4C" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="114" id="gFz-TL-kvA"/>
+                            <constraint firstItem="UVX-Ft-9Zm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="231" id="lOD-xZ-est"/>
+                            <constraint firstItem="DS5-Tv-DGl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="151" id="pBU-uL-XLi"/>
                             <constraint firstItem="Ihj-tQ-1aF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="szX-CC-WD7"/>
                             <constraint firstItem="Ihj-tQ-1aF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="335" id="wVf-dG-Eod"/>
+                            <constraint firstItem="kwK-39-aiA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="190" id="xGg-g4-rUu"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="dayPicker" destination="Ihj-tQ-1aF" id="8x9-cd-nIf"/>
+                        <outlet property="downtownDeliLabel" destination="H4x-gR-w0v" id="iuA-xq-0eu"/>
+                        <outlet property="lunchEntreeLabel" destination="ju2-JM-A4C" id="LiN-dt-53E"/>
+                        <outlet property="sidesLabel" destination="kwK-39-aiA" id="9hF-VR-ccv"/>
+                        <outlet property="souperSoupsLabel" destination="UVX-Ft-9Zm" id="IXb-8Q-taL"/>
+                        <outlet property="vegetarianEntreeLabel" destination="DS5-Tv-DGl" id="DAu-Uh-0Vg"/>
+                        <outlet property="weekLabel" destination="N87-2E-YMm" id="kNi-XA-RGI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
