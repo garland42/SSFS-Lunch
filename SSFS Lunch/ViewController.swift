@@ -29,12 +29,12 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     
     let week = DailyMenu(regExText: "OF(.*?),", isFriday: false)
-    //let startDate =
     let monday = DailyMenu(regExText: "MONDAY(.*?)TUESDAY", isFriday: false)
     let tuesday = DailyMenu(regExText: "TUESDAY(.*?)WEDNESDAY", isFriday: false)
     let wednesday = DailyMenu(regExText: "WEDNESDAY(.*?)THURSDAY", isFriday: false)
     let thursday = DailyMenu(regExText: "THURSDAY(.*?)FRIDAY", isFriday: false)
     let friday = DailyMenu(regExText: "FRIDAY(.*)", isFriday: true)
+//    let userDefaultsLastRowKey = "defaultRow"
     
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -49,21 +49,49 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         return weekdays[row]
     }
     
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if weekdays[row] == "Monday" { //alright so I know this is a horrible way to do it but I just want to be able to do it at all before I make it neater. I am totally open to ideas. Also, I need to fix it so that the text doesn't disapear off of the screen, and so that it starts off saying something.
+            lunchEntreeLabel.text = "Lunch Entrée: " + monday.lunchEntree
+            vegetarianEntreeLabel.text = "Vegetarian Entrée: " + monday.vegetarianEntree
+            sidesLabel.text = "Sides: " + monday.sides
+            souperSoupsLabel.text = "Souper Soups: " + monday.souperSoups
+            downtownDeliLabel.text = "Downtown Deli: " + monday.downtownDeli
+        } else if weekdays[row] == "Tuesday" {
+            lunchEntreeLabel.text = "Lunch Entrée: " + tuesday.lunchEntree
+            vegetarianEntreeLabel.text = "Vegetarian Entrée: " + tuesday.vegetarianEntree
+            sidesLabel.text = "Sides: " + tuesday.sides
+            souperSoupsLabel.text = "Souper Soups: " + tuesday.souperSoups
+            downtownDeliLabel.text = "Downtown Deli: " + tuesday.downtownDeli
+        } else if weekdays[row] == "Wednesday" {
+            lunchEntreeLabel.text = "Lunch Entrée: " + wednesday.lunchEntree
+            vegetarianEntreeLabel.text = "Vegetarian Entrée: " + wednesday.vegetarianEntree
+            sidesLabel.text = "Sides: " + wednesday.sides
+            souperSoupsLabel.text = "Souper Soups: " + wednesday.souperSoups
+            downtownDeliLabel.text = "Downtown Deli: " + wednesday.downtownDeli
+        } else if weekdays[row] == "Thursday" {
+            lunchEntreeLabel.text = "Lunch Entrée: " + thursday.lunchEntree
+            vegetarianEntreeLabel.text = "Vegetarian Entrée: " + thursday.vegetarianEntree
+            sidesLabel.text = "Sides: " + thursday.sides
+            souperSoupsLabel.text = "Souper Soups: " + thursday.souperSoups
+            downtownDeliLabel.text = "Downtown Deli: " + thursday.downtownDeli
+        } else if weekdays[row] == "Friday" {
+            lunchEntreeLabel.text = "Lunch Entrée: " + friday.lunchEntree
+            vegetarianEntreeLabel.text = "Vegetarian Entrée: " + friday.vegetarianEntree
+            sidesLabel.text = "Sides: " + friday.sides
+            souperSoupsLabel.text = "Souper Soups: " + friday.souperSoups
+            downtownDeliLabel.text = "Downtown Deli: " + friday.downtownDeli
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         weekLabel.text = week.dayMeal
+
         self.dayPicker.delegate = self
         self.dayPicker.dataSource = self
         let defaultPickerRow = dayPicker.numberOfRowsInComponent(0) / 2 //gives you half the # of rows
         dayPicker.selectRow(defaultPickerRow, inComponent: 0, animated: false)
         // Do any additional setup after loading the view, typically from a nib.
-//        print(friday.lunchEntree)
-//        print(friday.vegetarianEntree)
-//        print(friday.sides)
-//        print(friday.souperSoups)
-//        print(friday.downtownDeli)
-//        print(friday.dayMeal)
-        //print(week.dayMeal)
     }
     
 
@@ -71,6 +99,16 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+//    func displayLunchOptionsForRow(row: Int) {
+//        
+//    }
+//    
+//    func saveSelectedRow(row: Int) {
+//        let defaults = NSUserDefaults.standardUserDefaults() //user defaults work with key value pairs, like the dictionary we saw in space adventure.
+//        defaults.setInteger(row, forKey: userDefaultsLastRowKey)
+//        defaults.synchronize() //saves data to the p-list file
+//    }
 
 }
 
