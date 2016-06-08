@@ -13,16 +13,26 @@ class Menu {
     var shorterMenu = [String]()
     var otherMenu = [String]()
     var differentMenu = [String]()
+    var spacesMenu = [String]()
     var aMenu = String()
     
     init() {
-        let path = NSBundle.mainBundle().pathForResource("document", ofType: "xml")
+//        let path = NSBundle.mainBundle().pathForResource("document", ofType: "xml")
+//        
+//        do {
+//            self.menuContents = try String(contentsOfFile: path!) //exclamation point so that it doesn't return nil
+//        }
+//        catch {
+//            print("There was an error.")
+//        }
         
-        do {
-            self.menuContents = try String(contentsOfFile: path!) //exclamation point so that it doesn't return nil
-        }
-        catch {
-            print("There was an error.")
+        if let url = NSURL(string: "https://grover.ssfs.org/menus/word/document.xml") {
+            
+            do {
+                self.menuContents = try String(contentsOfURL: url, usedEncoding: nil)
+            } catch {
+                print("there was an error.")
+            }
         }
         
         let newMenu = self.menuContents.componentsSeparatedByString(">")
@@ -49,7 +59,27 @@ class Menu {
                 differentMenu.append(item)
             }
         }
+        var number = Int()
+        var loop = -1
+        var n = 0
         for item in differentMenu {
+            spacesMenu.append(item)
+        }
+        
+        for item in differentMenu {
+            loop += 1
+            if item == "SIDES" {
+                //okay, so I know that this messes up when cous cous is a side dish, because it's in the array as "cous" and then a separate, secondary "cous", but I'd rather have it look a little weird the few times a year that they have cous cous or any other side dish that is separated in the array and have it print out "cous & cous", and have everything else look nice, than to have every day of the year look weird and bunched together, and because I just spent a lot of time trying to figure out how to get it to print out an ampersand in between sides and souper soups, I am surprisingly adamant about this issue.
+                number = loop + 2 + n
+                spacesMenu.insert(" & ", atIndex: number)
+                n += 1
+            } else if item == "SOUPER SOUPS" {
+                number = loop + 2 + n
+                spacesMenu.insert(" & ", atIndex: number)
+                n += 1
+            }
+        }
+        for item in spacesMenu {
             let newString = String(item)
             aMenu = aMenu + newString
         }

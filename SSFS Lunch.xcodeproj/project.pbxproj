@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3A3F41E61CE4C86500A99E02 /* Days.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3F41E51CE4C86500A99E02 /* Days.swift */; };
 		3A5B39CC1CCFC0D7006B5BE3 /* document.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3A5B39CB1CCFC0D7006B5BE3 /* document.xml */; };
 		3AE044561CCE653E00497E36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE044551CCE653E00497E36 /* AppDelegate.swift */; };
 		3AE044581CCE653E00497E36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE044571CCE653E00497E36 /* ViewController.swift */; };
@@ -37,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3A3F41E51CE4C86500A99E02 /* Days.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Days.swift; sourceTree = "<group>"; };
 		3A5B39CB1CCFC0D7006B5BE3 /* document.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = document.xml; sourceTree = "<group>"; };
 		3AE044521CCE653E00497E36 /* SSFS Lunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SSFS Lunch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE044551CCE653E00497E36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 				3AE044591CCE653E00497E36 /* Main.storyboard */,
 				3AE0445C1CCE653E00497E36 /* Assets.xcassets */,
 				3AE044611CCE653E00497E36 /* Info.plist */,
-				3A3F41E51CE4C86500A99E02 /* Days.swift */,
 				3AE8953B1CEB9489006CE264 /* DailyMenu.swift */,
 				3AE044831CCE679000497E36 /* Menu.swift */,
 			);
@@ -267,7 +264,6 @@
 			files = (
 				3AE044841CCE679000497E36 /* Menu.swift in Sources */,
 				3AE044581CCE653E00497E36 /* ViewController.swift in Sources */,
-				3A3F41E61CE4C86500A99E02 /* Days.swift in Sources */,
 				3AE8953C1CEB948A006CE264 /* DailyMenu.swift in Sources */,
 				3AE044561CCE653E00497E36 /* AppDelegate.swift in Sources */,
 			);

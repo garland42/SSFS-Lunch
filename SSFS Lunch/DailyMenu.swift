@@ -26,7 +26,7 @@ class DailyMenu {
         }
         else {
             self.fridayMeal = String(menu.getLunch(menu.aMenu, regExText: regExText))
-            self.dayMeal = String(menu.getLunch(fridayMeal, regExText: regExText)) //run it twice to find Friday so that it eliminates the first Friday the first time, and then finds the right Friday the second time!
+            self.dayMeal = String(menu.getLunch(fridayMeal, regExText: regExText)) //Every other weekday is mentioned only once in the xml file, so because Friday is mentioned twice it grabs the first Friday the first time (which is the wrong one). This runs it twice, so that the first Friday is cut out the first time, and the correct Friday is grabbed the second time.
             getDailyMeal()
         }
 
