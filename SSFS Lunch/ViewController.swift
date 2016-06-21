@@ -19,15 +19,37 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     @IBOutlet weak var weekLabel: UILabel!
     
+
+
     @IBOutlet weak var lunchEntreeLabel: UILabel!
     
+    @IBOutlet weak var lunchEntreeText: UITextView!
+    
+    
+    
     @IBOutlet weak var vegetarianEntreeLabel: UILabel!
+       @IBOutlet weak var vegetarianEntreeText: UITextView!
+    
+
+    
     
     @IBOutlet weak var sidesLabel: UILabel!
+    @IBOutlet weak var sidesText: UITextView!
+    
+    
+
     
     @IBOutlet weak var souperSoupsLabel: UILabel!
     
+    @IBOutlet weak var souperSoupsText: UITextView!
+    
+
+
+    
+    
     @IBOutlet weak var downtownDeliLabel: UILabel!
+    @IBOutlet weak var downtownDeliText: UITextView!
+    
     
     
     let week = DailyMenu(regExText: "OF(.*?),", isFriday: false)
@@ -73,16 +95,21 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         
         let day = DailyMenu(regExText: dayString, isFriday: dayBool)
         
-        lunchEntreeLabel.text = "Lunch Entrée: " + day.lunchEntree
-        vegetarianEntreeLabel.text = "Vegetarian Entrée: " + day.vegetarianEntree
-        sidesLabel.text = "Sides: " + day.sides
-        souperSoupsLabel.text = "Souper Soups: " + day.souperSoups
-        downtownDeliLabel.text = "Downtown Deli: " + day.downtownDeli
+        lunchEntreeText.text = day.lunchEntree
+        vegetarianEntreeText.text = day.vegetarianEntree
+        sidesText.text = day.sides
+        souperSoupsText.text = day.souperSoups
+        downtownDeliText.text = day.downtownDeli
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         weekLabel.text = week.dayMeal
+        lunchEntreeLabel.text = "Lunch Entrée:"
+        vegetarianEntreeLabel.text = "Vegetarian Entrée:"
+        sidesLabel.text = "Sides:"
+        souperSoupsLabel.text = "Souper Soups:"
+        downtownDeliLabel.text = "Downtown Deli:"
         self.dayPicker.delegate = self
         self.dayPicker.dataSource = self
         let date = String(NSDate())
@@ -108,7 +135,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             rowNumber = 2 //then it shows wednesday by default (middle of pickerview)
         }
         dayPicker.selectRow(rowNumber, inComponent: 0, animated: false) //daypicker automatically is on the current date
-        pickerView(dayPicker, didSelectRow: rowNumber, inComponent: 0) //label automatically shows lunch for current date
+        pickerView(dayPicker, didSelectRow: rowNumber, inComponent: 0) //Text automatically shows lunch for current date
     }
     
 
